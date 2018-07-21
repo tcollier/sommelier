@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tcollier/sommelier.svg?branch=master)](https://travis-ci.org/tcollier/sommelier)
+
 # Sommelier
 
 Sommelier provides a solution to a variant of the Stable Marriage problem in
