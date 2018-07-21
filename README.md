@@ -13,7 +13,7 @@ restaurant menu and the brides-to-be are wines.
 The [Stable Marriage Problem](https://en.wikipedia.org/wiki/Stable_marriage_problem)
 is a mathematical problem that attempts to uniquely match a set of _N_ items
 (classically male suitors) with another set of _N_ items (classically females the
-suitors wish to marry). The final matches are referred to as proposals.
+suitors wish to marry).
 
 ## Gale-Shapely Algorithm
 
@@ -25,17 +25,18 @@ this is not always practical.
 
 ## Variation
 
-The algorithm applied here has 2 primary differences from Gale-Shapely
+The algorithm applied here has a few key differences from Gale-Shapely
 
-1. Neither suitors nor suitees need to have a complete ranking of the other set.
-2. The rankings are determined by a symmetrical match score. For example, the match
-score for Alice and Steve is the same as for Steve and Alice. Though scores are
-relative, so Alice's match score for Steve may be her highest scoring match, but
-that same score may only be the fifth highest scoring match for Steve.
+1. The number of dishes and wines do not need to be equal.
+2. Neither dishes nor wines need to have a complete ranking of the other set.
+3. The rankings are determined by a symmetrical match score. For example, the match
+score for Eggplant and Cabernet is the same as for Cabernet and Eggplant. Though scores are
+relative, so Eggplant's match score for Cabernet may be its highest scoring match, but
+that same score may only be the fifth highest scoring match for Cabernet.
 
-Because of these differences, not every suitor or suitee is guaranteed to have
-a proposal. Swapping the suitor and suitee sets can have dramatic effects on the
-final set of proposals.
+Because of these differences, not every dish or wine is guaranteed to be in the
+pairings map. Swapping the dish and wine sets in the match catalog alter the final
+set of pairings.
 
 ## Usage
 
