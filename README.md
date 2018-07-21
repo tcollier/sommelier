@@ -67,3 +67,36 @@ puts sommelier.pairings
 
 # Note: neither "Eggplant" nor "Chardonnay" were matched in the pairings map
 ```
+
+### CSV
+
+This gem provides a rake task to apply the Sommelier algorithm to a CSV file.
+The file must have a header row and the columns are expected to be in the following
+order:
+
+1. `dish`
+2. `wine`
+3. `score`
+
+Note: the header row is simply ignored, so the columns can be named anything.
+
+Any additional columns will be ignored.
+
+```csv
+# matches.csv
+dish,wine,score
+Asparagus,Pinot Noir,0.366
+Asparagus,Sauvignon Blanc,0.453
+Asparagus,Chardonnay,0.245
+Tofu,Rosé,0.486
+Tofu,Sauvignon Blanc,0.304
+Eggplant,Sauvignon Blanc,0.299
+Salmon,Sauvignon Blanc,0.602
+```
+
+```bash
+rake sommelier:from_csv matches.csv
+# Salmon => Sauvignon Blanc
+# Tofu => Rosé
+# Asparagus => Pinot Noir
+```

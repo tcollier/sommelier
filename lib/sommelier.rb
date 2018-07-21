@@ -1,3 +1,6 @@
+require 'rake'
+load 'tasks/sommelier.rake'
+
 require_relative 'sommelier/match_maker'
 require_relative 'sommelier/match_catalog'
 
