@@ -1,3 +1,7 @@
+Version 0.2.0, 2018-07-21
+-------------------------
+fab29e5 Add rake task to apply Sommelier to a CSV
+
 Version 0.1.0, 2018-07-21
 -------------------------
 b5c4925 Initial release with Gale-Shapely variant
