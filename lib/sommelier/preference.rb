@@ -1,4 +1,4 @@
-class StableMarriage
+class Sommelier
   # Simple class to bind a score (useable for ranking/sorting) to a generic
   # object.
   class Preference

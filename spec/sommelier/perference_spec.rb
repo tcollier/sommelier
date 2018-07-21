@@ -1,4 +1,6 @@
-class StableMarriage
+require 'sommelier/preference'
+
+class Sommelier
   describe Preference do
     describe '#>' do
       subject(:preference) { described_class.new('Foo', 10) }

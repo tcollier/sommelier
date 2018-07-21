@@ -1,4 +1,10 @@
-# Stable Marriage
+# Sommelier
+
+Sommelier provides a solution to a variant of the Stable Marriage problem in
+mathematics. In this gem, the classical suitors are replaced with dishes from a
+restaurant menu and the brides-to-be are wines.
+
+## Stable Marriage Problem
 
 [![Numberphile: Stable Marriage Problem](https://img.youtube.com/vi/Qcv1IqHWAzg/0.jpg)](https://www.youtube.com/watch?v=Qcv1IqHWAzg)
 
@@ -31,26 +37,30 @@ final set of proposals.
 
 ## Usage
 
+### Installation
+
 ```bash
-gem install stable_marriage
+gem install tcollier-sommelier
 ```
 
+### Example
+
 ```ruby
-require 'stable_marriage'
-sm = StableMarriage.new
-sm.add_match('Alice', 'Marcus', 0.366)
-sm.add_match('Alice', 'Steve', 0.453)
-sm.add_match('Alice', 'Will', 0.245)
-sm.add_match('Janice', 'Phil', 0.486)
-sm.add_match('Janice', 'Steve', 0.304)
-sm.add_match('Lily', 'Steve', 0.299)
-sm.add_match('Maria', 'Steve', 0.602)
-puts sm.proposals
+require 'sommelier'
+sommelier = Sommelier.new
+sommelier.add_match('Asparagus', 'Pinot Noir', 0.366)
+sommelier.add_match('Asparagus', 'Sauvignon Blanc', 0.453)
+sommelier.add_match('Asparagus', 'Chardonnay', 0.245)
+sommelier.add_match('Tofu', 'Rose', 0.486)
+sommelier.add_match('Tofu', 'Sauvignon Blanc', 0.304)
+sommelier.add_match('Eggplant', 'Sauvignon Blanc', 0.299)
+sommelier.add_match('Salmon', 'Sauvignon Blanc', 0.602)
+puts sommelier.pairings
 # {
-#   "Maria" => "Steve",
-#   "Janice" => "Phil",
-#   "Alice" => "Marcus"
+#   "Salmon" => "Sauvignon Blanc",
+#   "Tofu" => "Rose",
+#   "Asparagus" => "Pinot Noir"
 # }
 
-# Note: neither Lily nor Will were matched in the proposals map
+# Note: neither "Eggplant" nor "Chardonnay" were matched in the pairings map
 ```

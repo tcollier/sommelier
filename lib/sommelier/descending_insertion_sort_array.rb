@@ -1,4 +1,4 @@
-class StableMarriage
+class Sommelier
   # An extension of the ruby built-in Array class with an optimization for
   # insertion sort. This class assumes the array elements are sorted in
   # descending order.

@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'stable_marriage/version'
+require 'sommelier/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'stable_marriage'
-  spec.version       = StableMarriage::VERSION
+  spec.name          = 'tcollier-sommelier'
+  spec.version       = Sommelier::VERSION
   spec.authors       = ['Tom Collier']
   spec.email         = ['tcollier@gmail.com']
 
   spec.summary       = 'Ruby implementation of a Stable Marriage solver'
-  spec.homepage      = 'https://github.com/tcollier/stable-marriage'
+  spec.homepage      = 'https://github.com/tcollier/sommelier'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

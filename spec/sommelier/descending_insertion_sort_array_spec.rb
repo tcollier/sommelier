@@ -1,6 +1,6 @@
-require 'stable_marriage/descending_insertion_sort_array'
+require 'sommelier/descending_insertion_sort_array'
 
-class StableMarriage
+class Sommelier
   describe DescendingInsertionSortArray do
     describe '#sorted_insert' do
       subject(:array) { described_class.new }

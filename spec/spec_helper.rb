@@ -4,4 +4,4 @@ require 'simplecov'
 
 SimpleCov.start
 
-require 'stable_marriage'
+require 'sommelier'
