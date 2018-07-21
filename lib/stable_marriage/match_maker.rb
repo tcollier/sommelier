@@ -1,15 +1,21 @@
 class StableMarriage
+  # Implementation of a variation of the Gale-Shapely algorithm.
   class MatchMaker
     def initialize(match_set)
       @match_set = match_set
     end
 
+    # Return a set of proposals. Given that not allowed all of the Gale-Shapely
+    # constraints must've been met, this is not guaranteed to include every
+    # suitor or every suitee.
+    #
+    # @return [Hash<Object, Object>] a mapping of suitor => suitee proposals  
     def proposals
       proposals = {}
       (0...match_set.max_suitor_preferences).each do |round|
         suitee_proposals = {}
-        match_set.each_suitor_prefs do |suitor, suitor_prefs|
-          if round < suitor_prefs.count && !proposals.key?(suitor)
+        match_set.each_suitor do |suitor, preferences_count|
+          if round < preferences_count && !proposals.key?(suitor)
             suitee = match_set.suitee_preferred_at(suitor, round)
             suitee_proposals[suitee] ||= []
             suitee_proposals[suitee] << suitor

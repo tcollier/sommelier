@@ -1,4 +1,6 @@
 class StableMarriage
+  # Simple class to bind a score (useable for ranking/sorting) to a generic
+  # object.
   class Preference
     attr_reader :object, :score
 
@@ -7,21 +9,10 @@ class StableMarriage
       @score = score
     end
 
-    def hash
-      object.hash
-    end
-
-    def ==(other)
-      return false unless other.is_a?(self.class)
-      hash == other.hash
-    end
-    alias_method :eql?, :==
-
     # Items used in DescendingInsertionSortArray must implement `>`
     def >(other)
       score > other.score
     end
   end
-
   private_constant :Preference
 end
