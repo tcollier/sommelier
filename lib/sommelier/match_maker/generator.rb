@@ -1,16 +1,15 @@
 class Sommelier
   class MatchMaker
+    # Generate all of the requested pairings for a single round of the
+    # algorithm. Each dish that isn't currently locked in a pairing from a
+    # prior round and hasn't exhausted its list of preferred wines will
+    # request a pairing with the highest matching wine it has not yet
+    # requested.
     class Generator
       def initialize(match_catalog)
         @match_catalog = match_catalog
       end
 
-      # Generate all of the requested pairings for a single round of the
-      # algorithm. Each dish that isn't currently locked in a pairing from a
-      # prior round and hasn't exhausted its list of preferred wines will
-      # request a pairing with the highest matching wine it has not yet
-      # requested.
-      #
       # @param round [Integer] the round number
       # @param accepted [Hash<Object, Object>] mapping of dishes to the wine
       #   that has accepted his pairing

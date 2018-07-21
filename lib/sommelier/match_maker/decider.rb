@@ -1,18 +1,22 @@
 class Sommelier
   class MatchMaker
+    # Decide a single dish's pairing request to accept for each wine
     class Decider
       def initialize(match_catalog)
         @match_catalog = match_catalog
       end
 
-      # Decide a single dish's pairing request to accept for each wine
+      # Decide on which requested pairings to accepts (up to one per wine) and
+      # update the `accepted` and `reversed` input maps.
       #
       # @param requests [Hash<Object, Array<Object>>] mapping of wines to
-      #   the list of dishes that have requested pairing in the current round
+      #   the list of dishes that have requested pairing in the current round.
       # @param accepted [Hash<Object, Object>] mapping of dishes to the wine
-      #   that has accepted its pairing request
+      #   that has accepted its pairing request. Note: invoking this method may
+      #   cause modifications to this object.
       # @param reversed [Hash<Object, Object>] mapping of wines to the dish
-      #   that has its pairing request accepted by wine
+      #   that has its pairing request accepted by wine. Note: invoking this
+      #   method may cause modifications to this object.
       def decide!(requests, accepted, reversed)
         requests.each do |wine, current_dishes|
           # Be sure to consider the full set of current dishes and potentially
