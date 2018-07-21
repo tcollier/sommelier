@@ -51,14 +51,14 @@ sommelier = Sommelier.new
 sommelier.add_match('Asparagus', 'Pinot Noir', 0.366)
 sommelier.add_match('Asparagus', 'Sauvignon Blanc', 0.453)
 sommelier.add_match('Asparagus', 'Chardonnay', 0.245)
-sommelier.add_match('Tofu', 'Rose', 0.486)
+sommelier.add_match('Tofu', 'Rosé', 0.486)
 sommelier.add_match('Tofu', 'Sauvignon Blanc', 0.304)
 sommelier.add_match('Eggplant', 'Sauvignon Blanc', 0.299)
 sommelier.add_match('Salmon', 'Sauvignon Blanc', 0.602)
 puts sommelier.pairings
 # {
 #   "Salmon" => "Sauvignon Blanc",
-#   "Tofu" => "Rose",
+#   "Tofu" => "Rosé",
 #   "Asparagus" => "Pinot Noir"
 # }
 
