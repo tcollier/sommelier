@@ -2,7 +2,7 @@ require_relative 'match_maker/generator'
 require_relative 'match_maker/decider'
 
 class Sommelier
-  # Implementation of a variation of the Gale-Shapely algorithm. In this
+  # Implementation of a variation of the Gale-Shapley algorithm. In this
   # variation, every dish that isn't currently in a pairing and hasn't exhausted
   # its list of preferred wines will attempt a pairing with its highest
   # matching wine that it has not yet attempt to pair with.
@@ -16,7 +16,7 @@ class Sommelier
       @match_catalog = match_catalog
     end
 
-    # Return a set of pairings. Given that not all of the Gale-Shapely
+    # Return a set of pairings. Given that not all of the Gale-Shapley
     # constraints must've been met, this is not guaranteed to include every
     # dish or every wine.
     #

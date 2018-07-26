@@ -35,15 +35,15 @@ class Sommelier
   # Include a potential pairing between the dish and wine. The pairing has a
   # score (a higher score means a better pairing) that is used the generate
   # preferences of dish => wines and wine => dishes. These preferences are used
-  # in a variant of the Gale-Shapely algorithm.
+  # in a variant of the Gale-Shapley algorithm.
   #
-  # Since the dishes are acting as the suitors (in Gale-Shapely terminology),
+  # Since the dishes are acting as the suitors (in Gale-Shapley terminology),
   # they tend to get better preferred wines than vice versa. However, since a
   # pairing is symmetrical, passing the wines in as the dish and the dishes in
   # as the wine will work, but yield potentially different pairings.
   #
-  # @param dish [Object] the proposal maker in the Gale-Shapely algorithm.
-  # @param wine [Object] the proposal acceptor/rejector in the Gale-Shapely
+  # @param dish [Object] the proposal maker in the Gale-Shapley algorithm.
+  # @param wine [Object] the proposal acceptor/rejector in the Gale-Shapley
   #   algorithm.
   # @param score [Numeric] a numeric representation of the strength of the
   #   pairing. A higher score means a better paring.

@@ -15,17 +15,17 @@ is a mathematical problem that attempts to uniquely match a set of _N_ items
 (classically male suitors) with another set of _N_ items (classically females the
 suitors wish to marry).
 
-## Gale-Shapely Algorithm
+## Gale-Shapley Algorithm
 
-This gem provides a variant of the [Gale-Shapely algorithm](https://en.wikipedia.org/wiki/Stable_marriage_problem#Solution).
-Gale-Shapely guarantees a complete matching (i.e. every suitor is paired with
+This gem provides a variant of the [Gale-Shapley algorithm](https://en.wikipedia.org/wiki/Stable_marriage_problem#Solution).
+Gale-Shapley guarantees a complete matching (i.e. every suitor is paired with
 exactly one female and vice versa). Though this algorithm assumes every member
 of either group has a complete ranking of the other group. For large populations,
 this is not always practical.
 
 ## Variation
 
-The algorithm applied here has a few key differences from Gale-Shapely
+The algorithm applied here has a few key differences from Gale-Shapley
 
 1. The number of dishes and wines do not need to be equal.
 2. Neither dishes nor wines need to have a complete ranking of the other set.
